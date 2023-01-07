@@ -1,0 +1,17 @@
+plugins {
+    id "com.github.node-gradle.node" version "3.5.0"
+}
+
+apply plugin: 'base'
+apply plugin: "com.github.node-gradle.node"
+
+node {
+    version = "14.16.1"
+    download = true
+}
+
+task bundle(type: NpmTask, dependsOn: npmInstall) {
+    args = ['run', 'build']
+}
+
+assemble.dependsOn(bundle)
