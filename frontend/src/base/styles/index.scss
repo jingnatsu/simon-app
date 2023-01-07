@@ -1,0 +1,60 @@
+@import '../styles/variables';
+
+body {
+  font-family: 'Droid Serif', Georgia, serif;
+  position: relative;
+    font-size: 1em;
+    line-height: 1.8;
+    -webkit-text-size-adjust: none;
+    overflow-x: hidden;
+}
+
+
+
+// @font-face {
+//   font-family: 'fontello';
+//   font-style: normal;
+//   src: url("#{$fa-font-path}/fontello.eot");
+// src:url("#{$fa-font-path}/fontello.woff") format("woff"),
+// url("#{$fa-font-path}/fontello.ttf") format("truetype"),
+// url("#{$fa-font-path}/fontello.svg#fontello") format("svg");
+// }
+
+body {
+  font-family: 'Droid Serif', Georgia, serif;
+  position: relative;
+    font-size: 1em;
+    line-height: 1.8;
+    -webkit-text-size-adjust: none;
+    overflow-x: hidden;
+}
+
+/* FONTELLO ICONS */
+.icon,
+.icon:before,
+.alert:before,
+blockquote:before,
+.toggle h4:before,
+.search-toggle:before, 
+.social-toggle:before,
+.mask:before,
+.post-format:before,
+.selector:before,
+.checker span:before,
+.radio span:before,
+.uploader span.action:before {
+    font-family: 'fontello'; font-style:normal; font-weight:400; speak:none; display:inline-block; text-decoration:inherit; text-align:center; font-variant:normal; text-transform:none;
+    }
+
+
+// .icon, .icon:before, .alert:before, blockquote:before, .toggle h4:before, .search-toggle:before, .social-toggle:before, .mask:before, .post-format:before, .selector:before, .checker span:before, .radio span:before, .uploader span.action:before {
+//   font-family: 'fontello';
+//   font-style: normal;
+//   font-weight: 400;
+//   speak: none;
+//   display: inline-block;
+//   text-decoration: inherit;
+//   text-align: center;
+//   font-variant: normal;
+//   text-transform: none;
+// }

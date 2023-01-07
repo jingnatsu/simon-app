@@ -1,0 +1,18 @@
+{"sliders": [{
+	"id": 0,
+	"tittle": "First slide label",
+	"content": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+	"urlImg":  "/images/slider/1.jpg"
+},
+{
+	"id": 1,
+  "tittle": "First slide label",
+  "content": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+  "urlImg":  "/images/slider/2.jpg"
+},
+{
+	"id": 2,
+  "tittle": "First slide label",
+  "content": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+  "urlImg":  "/images/slider/3.jpg"
+}]}

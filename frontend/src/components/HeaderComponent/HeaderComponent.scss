@@ -1,0 +1,17 @@
+
+#HeaderComponent {
+    position: relative;
+    z-index: 1000;
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.4em 0;
+    border-bottom: 1px solid #E9E6DF;
+}
+
+@media screen and (min-width: 992px) {
+    .site-header {
+        padding: 0 0 3em;
+        width: 100%;
+    }
+}
