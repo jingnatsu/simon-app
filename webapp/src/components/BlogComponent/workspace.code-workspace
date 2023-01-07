@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "../../../../simon-backend-nestjs"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../simon-be-expressjs"
+		},
+		{
+			"path": "../../../../youtube-react-admin"
+		},
+		{
+			"path": "../../../../simon-be-api"
+		},
+		{
+			"path": "../../../../../00-frontend-starting-setup"
+		},
+		{
+			"path": "../../../../js-tutorial"
+		},
+		{
+			"path": "../../../../simon-bo"
+		},
+		{
+			"path": "../../../../../vuexyvuejsadmin-65-1/vuexyvuejsadmin-65/vuexy-admin-v6.5/react-version/full-version"
+		}
+	],
+	"settings": {}
+}
