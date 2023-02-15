@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../store/hook'
-import { getArticleFull } from '../../store/ArticleSlice'
+import { fetchArticles } from '../../store/ArticleSlice'
 import isEmpty from 'lodash/isEmpty'
 import './index.scss'
 import FullArticleComponent from './FullArticleComponent';
+import {isNaN} from "lodash";
 
 function BlogComponent() {
 
@@ -17,7 +18,9 @@ function BlogComponent() {
   const article = useAppSelector(state => state.articleSlice.article);
   
   useEffect(() => {
-    dispatch(getArticleFull(articleId))
+    if(articleId && !isNaN(articleId)) {
+      dispatch(fetchArticles(Number(articleId)));
+    }
   }, [articleId])
 
   return (

@@ -72,23 +72,23 @@ const initialState = {
   }
 )
 
-export const getArticleFull = createAsyncThunk< ArticleFull, string | undefined, { rejectValue: ValidationErrors }>(
-  'article/getFullArticle',
-  async ( articleId: string | undefined, { rejectWithValue }) => {
-    try {
-      const response = await SliderService.getFullArticle(articleId);
-      console.log(response);
-      return response.data
-    } catch (err) {
-      let error: AxiosError<ValidationErrors> = err // cast the error for access
-    if (!error.response) {
-      throw err
-    }
-      return rejectWithValue(error.response.data);
-    }
-    
-  }
-)
+// export const getArticleFull = createAsyncThunk< ArticleFull, number, { rejectValue: ValidationErrors }>(
+//   'article/getFullArticle',
+//   async ( articleId: number, { rejectWithValue }) => {
+//     try {
+//       const response = await SliderService.getFullArticle(articleId);
+//       console.log(response);
+//       return response.data
+//     } catch (err) {
+//       let error: AxiosError<ValidationErrors> = err // cast the error for access
+//     if (!error.response) {
+//       throw err
+//     }
+//       return rejectWithValue(error.response.data);
+//     }
+//
+//   }
+// )
 
 const articleSlice = createSlice({
   name: 'articleSlice',
@@ -111,17 +111,17 @@ const articleSlice = createSlice({
         state.error = action.error.message
       }
     })
-    builder.addCase(getArticleFull.fulfilled, (state, { payload }) => {
-      state.article = payload
-      })
-      builder.addCase(getArticleFull.rejected, (state, action) => {
-        if (action.payload) {
-          // Being that we passed in ValidationErrors to rejectType in `createAsyncThunk`, the payload will be available here.
-          state.error = action.payload.errorMessage
-        } else {
-          state.error = action.error.message
-        }
-      })
+    // builder.addCase(getArticleFull.fulfilled, (state, { payload }) => {
+    //   state.article = payload
+    //   })
+    //   builder.addCase(getArticleFull.rejected, (state, action) => {
+    //     if (action.payload) {
+    //       // Being that we passed in ValidationErrors to rejectType in `createAsyncThunk`, the payload will be available here.
+    //       state.error = action.payload.errorMessage
+    //     } else {
+    //       state.error = action.error.message
+    //     }
+    //   })
     
   }
 })

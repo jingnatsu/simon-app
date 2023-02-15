@@ -13,7 +13,7 @@ export default class SliderService {
   static getArticles() : Promise<AxiosResponse> {
     return  axios.get('http://localhost:3002/articles');
   }
-  static getFullArticle(articleId: string | undefined) : Promise<AxiosResponse> {
+  static getFullArticle(articleId: number) : Promise<AxiosResponse> {
     return  axios.get('http://localhost:3002/articles/' + articleId);
   }
 

@@ -65,14 +65,15 @@ const blogSlice = createSlice({
   name: 'blogSlice',
   initialState: initialState,
   reducers: {
-   updateArticles: (state:ArticleFullState, {payload} : PayloadAction<ArticleFull[]>) => {
+   updateArticles: (state: ArticleFullState, {payload} : PayloadAction<ArticleFull[]>) => {
      state.articles = payload;
    } 
   },
   extraReducers: (builder) => {
    // The `builder` callback form is used here because it provides correctly typed reducers from the action creators
-   builder.addCase(fetchSliders.fulfilled, (state, { payload }) => {
-    state.articles = payload
+   builder.addCase(fetchSliders.fulfilled, (state, { payload  }) => {
+    // @ts-ignore
+       state.articles = payload
     })
     builder.addCase(fetchSliders.rejected, (state, action) => {
       if (action.payload) {
