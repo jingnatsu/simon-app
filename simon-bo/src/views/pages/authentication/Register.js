@@ -51,6 +51,7 @@ const Register = () => {
         .register({ username, email, password })
         .then(res => {
           if (res.data.error) {
+            const arr = {};
             for (const property in res.errors) {
               if (res.errors[property] !== null) arr[property] = res.errors[property]
             }

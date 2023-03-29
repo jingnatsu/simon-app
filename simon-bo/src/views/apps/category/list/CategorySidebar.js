@@ -10,7 +10,7 @@ import { isObjEmpty } from '@utils'
 // ** Third Party Components
 import classnames from 'classnames'
 import { useForm } from 'react-hook-form'
-import { Button, FormGroup, Label, FormText, Form, Input } from 'reactstrap'
+import { Button, FormGroup, Label, Form, Input } from 'reactstrap'
 
 // ** Store & Actions
 import { addCategory } from '../store/action'
@@ -66,7 +66,7 @@ const SidebarNewCategory = ({ open, toggleSidebar }) => {
         
         <FormGroup>
           <Label for='status'>Status</Label>
-          <Input type='select' id='status' name='status' value={status} onChange={e => setStatus(e.target.value)}>
+          <Input type='select' id='status' name='status' value={categoryStatus} onChange={e => setStatus(e.target.value)}>
             <option value='active'>Active</option>
             <option value='inactive'>Inactive</option>
           </Input>
